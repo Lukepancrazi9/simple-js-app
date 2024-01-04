@@ -1,3 +1,8 @@
+alert('Hello World');
+
+let favoriteFood = 'Chicken';
+document.write(favoriteFood);
+
 let myName = 'Luke';
 document.write(myName);//comment comment
 /*comment*/
