@@ -1,16 +1,19 @@
-alert('Hello World');
+let pokemonList = [
+    {
+        name: 'Pikachu',
+        height: 0.4, //m
+        type: 'electric'
+    },
 
-let favoriteFood = 'Chicken';
-document.write(favoriteFood);
+    {
+        name: 'Pidgeot',
+        height: 1.5, //m
+        type: ['flying', 'normal']
+    },
 
-let myName = 'Luke';
-document.write(myName);//comment comment
-/*comment*/
-
-let simpleAdittion = 2+2;
-document.write(simpleAdittion);
-
-let size = 100;
-let doubleSize = size * 2;
-let minSize = (doubleSize * 2) - (size / 2);
-document.write(minSize);
+    {
+        name: 'Charizard',
+        height: 1.7, //m
+        type: ['fire', 'flying']
+    }
+];
