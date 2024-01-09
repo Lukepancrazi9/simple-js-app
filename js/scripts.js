@@ -17,3 +17,11 @@ let pokemonList = [
         type: ['fire', 'flying']
     }
 ];
+
+for (let i=0; i < pokemonList.length; i++){
+    if (pokemonList[i].height > 1.6){
+        document.write('<p>' + pokemonList[i].name + " (height:" + pokemonList[i].height + ")" + " - Wow that's huge!" +'</p>'); 
+    }else {
+        document.write('<p>' + pokemonList[i].name + " (height:" + pokemonList[i].height + ")" +'</p>');
+    }
+}
