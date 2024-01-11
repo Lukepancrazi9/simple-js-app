@@ -1,3 +1,5 @@
+let pokemonRepository = (function (){
+
 let pokemonList = [
     {
         name: 'Pikachu',
@@ -17,8 +19,25 @@ let pokemonList = [
         type: ['fire', 'flying']
     }
 ];
+function add(pokemon){
+    if (typeof pokemon === 'object'){
+        pokemonList.push(pokemon);
+    }
+}
+function getAll(){
+    return pokemonList;
+}
+return{
+    add: add,
+    getAll: getAll
+}
+})();
 
-pokemonList.forEach (function (pokemon){
+pokemonRepository.add({
+    name: 'Nidoqueen', height: 1.3, type: ['ground', 'poison']
+});
+
+pokemonRepository.getAll().forEach (function (pokemon){
     if (pokemon.height > 1.6){
         document.write('<p>' + pokemon.name + " (height:" + pokemon.height + ")" + " - Wow that's huge!" +'</p>'); 
     }else {
