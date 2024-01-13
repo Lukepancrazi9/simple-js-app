@@ -27,6 +27,10 @@ function add(pokemon){
 function getAll(){
     return pokemonList;
 }
+function showDetails(pokemon){
+    console.log(pokemon);
+}
+
 function addListItem(pokemon){
     let pokemonList = document.querySelector(".pokemon-list");
     let list = document.createElement("li");
@@ -36,6 +40,10 @@ function addListItem(pokemon){
     button.innerText = pokemon.name;
     button.classList.add("button-class");
     list.appendChild(button);
+
+    button.addEventListener("click", function(){
+        showDetails(pokemon.name);
+    });
     
 }
 return{
