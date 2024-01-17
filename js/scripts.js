@@ -22,7 +22,7 @@ function addListItem(pokemon){
     list.appendChild(button);
 
     button.addEventListener("click", function(){
-        showDetails(pokemon.name);
+        showDetails(pokemon);
     });
     
 }
