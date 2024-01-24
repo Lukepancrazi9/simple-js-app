@@ -77,7 +77,7 @@ function openModal(pokemon) {
     closeButtonElement.addEventListener('click', hideModal);
 
     let imgElement = document.createElement('img');
-    imgElement.src = pokemon.imgUrl;
+    imgElement.src = pokemon.imageUrl;
     imgElement.alt = pokemon.name;
 
     let nameElement = document.createElement('h2');
