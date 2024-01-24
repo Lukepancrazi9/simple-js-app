@@ -4,7 +4,7 @@ h1{
     margin: 50px;
 
 }
-button{
+.button-class{
     width: 200px;
     text-align: center;
     padding: 10px;
@@ -13,8 +13,9 @@ button{
     border-radius: 5%;
     box-shadow: black 2px 2px 4px;
     cursor: pointer;
+    text-transform: capitalize;
 }
-button:hover{
+.button-class:hover{
     transform: scale(1.02);
 }
 li{
@@ -25,6 +26,58 @@ li{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     grid-gap: 20px;
+}
+
+#modal-container{
+    display: none;
+}
+#modal-container.is-visible{
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    overflow: auto;
+    display: grid;
+    text-align: center;
+}
+.modal{
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+    border-radius: 3%;
+}
+.modal-close{
+    float: right;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: #777;
+    cursor: pointer;
+}
+.modal-close:hover{
+    text-decoration: underline;
+    transform: scale(1.01);
+}
+.modal h2{
+    margin-top: 0;
+    text-transform: capitalize;
+}
+.modal p{
+    margin-top: 0;
+}
+img{
+    max-width: 100%;
+    align-self: center;
 }
 
 @media all and (max-width: 1170px){
@@ -43,7 +96,7 @@ li{
         grid-template-columns: 1fr;
         text-align: center;
     }
-    button{
+    .button-class{
         width: 200px;
     }
 }
