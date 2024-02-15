@@ -12,9 +12,9 @@ function getAll(){
 }
 
 function addListItem(pokemon){
-    let pokemonList = document.querySelector(".pokemon-list");
+    let pokemonList = document.querySelector(".list-group");
     let list = document.createElement("li");
-    list.classList.add('pokemon-list-item')
+    list.classList.add('list-group-item')
     pokemonList.appendChild(list);
 
     let button = document.createElement("button");

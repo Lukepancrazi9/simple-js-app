@@ -4,7 +4,7 @@ h1{
     margin: 50px;
 
 }
-.button-class{
+.btn-success{
     width: 200px;
     text-align: center;
     padding: 10px;
@@ -21,7 +21,15 @@ h1{
 li{
     list-style-type: none;
 }
-.pokemon-list{
+.list-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    grid-gap: 20px;
+    margin-top: 70px;
+    text-transform: capitalize;
+}
+/* .pokemon-list{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
@@ -74,7 +82,7 @@ li{
 }
 .modal p{
     margin-top: 0;
-}
+} */
 img{
     max-width: 100%;
     align-self: center;
