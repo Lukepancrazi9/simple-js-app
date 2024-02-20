@@ -105,3 +105,33 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+let inputField = document.querySelector('input');
+
+document.querySelector('#searchButton').addEventListener('click', function (event) {
+    event.preventDefault();
+    searchPage();
+});
+
+inputField.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        searchPage();
+    }
+});
+
+function searchPage() {
+    let searchString = inputField.value.trim().toLowerCase();
+
+    if (searchString !== '') {
+    
+        document.querySelector('.list-group').innerHTML = '';
+
+        pokemonRepository.getAll().forEach(function (currentPokemon) {
+            let currentPokemonName = currentPokemon.name.toLowerCase();
+            if (currentPokemonName.includes(searchString)) {
+                pokemonRepository.addListItem(currentPokemon);
+            }
+        });
+    }
+}
