@@ -133,5 +133,15 @@ function searchPage() {
                 pokemonRepository.addListItem(currentPokemon);
             }
         });
+    } else {
+        // If search string is empty, show all Pokémon again
+        showAllPokemon();
     }
+}
+
+function showAllPokemon() {
+    document.querySelector('.list-group').innerHTML = '';
+    pokemonRepository.getAll().forEach(function(pokemon) {
+        pokemonRepository.addListItem(pokemon);
+    });
 }
